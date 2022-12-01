@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333853;
+  color: #f2f5f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.d-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper { height: 100vh; }
+
+.wrapper .clock-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .card_time-container:not(:first-child):not(:last-child) { margin: 0 1.75rem; }
+
+.clock-container .card_time-container { flex-direction: column; }
+
+.card_time-container .card_info-container {
+  background-color: #D9D9D9;
+  color: #444;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  height: 120px;
+  width: 120px;
+}
+
+.card_info-container .time-text { 
+  font-size: 2.5rem;
+  font-weight: 400; 
+}
+
+.card_time-container .label-text { 
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+}

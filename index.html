@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title> Clock </title>
+  <!-- Style -->
+  <link rel='stylesheet' href='index.css'>
+</head>
+<body>
+  
+  <div class='wrapper d-center'>
+    <div class='clock-container d-center'>
+      <div class='card_time-container d-center'> 
+        <div class='card_info-container d-center'>
+          <h3 class='time-text' id='hours-time'> 00 </h3>
+        </div>
+        <h2 class='label-text'> Horas </h2>
+      </div>
+      <div class='card_time-container d-center'> 
+        <div class='card_info-container d-center'>
+          <h3 class='time-text' id='minutes-time'> 00 </h3>
+        </div>
+        <h2 class='label-text'> Minutos </h2>
+      </div>
+      <div class='card_time-container d-center'> 
+        <div class='card_info-container d-center'>
+          <h3 class='time-text' id='seconds-time'> 00 </h3>
+        </div>
+        <h2 class='label-text'> Segundos </h2>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      let currentDate = new Date();
+      
+      document.querySelector('#hours-time').innerHTML = `${currentDate.getHours()}`.padStart(2, '0'); 
+      document.querySelector('#minutes-time').innerHTML = `${currentDate.getMinutes()}`.padStart(2, '0'); 
+      document.querySelector('#seconds-time').innerHTML = `${currentDate.getSeconds()}`.padStart(2, '0');
+    };
+  </script>
+  <script src='index.js'></script>
+</body>
+</html>
